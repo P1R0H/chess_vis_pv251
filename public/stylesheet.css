@@ -1,0 +1,83 @@
+
+:root {
+    --cbg: #202026;
+    --btn_light: #32323a;
+    --piece_black: #080816;
+    --piece_white: #e6e6e6;
+    --piece_gray: #3c3c3c;
+}
+
+body {
+    margin: 0px;
+	background-color: white;
+	/*margin-top:50px;*/
+}
+
+
+#title_div {
+    height: 50px;
+    padding: 8px 16px 8px 16px;
+    box-shadow: 0px 0px 10px 6px black;
+    background-color: var(--cbg);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.upBtn {
+    width: 80px;
+    height: 40px;
+
+    font-weight: bolder;
+
+    border-radius: 8px;
+    border: 2px solid var(--btn_light);
+    display: inline-block;
+    background-color: var(--cbg);
+    color: whitesmoke;
+    transition-duration: 0.2s;
+}
+
+.upBtn:hover {
+    background-color: var(--btn_light);
+}
+
+
+#main_content {
+    height: 400px;
+
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+
+/* Drag'n'Drop file upload modal for future use (maybe?)*/
+/*
+
+.modalBgr {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal {
+    height: 12cm;
+    width: 10cm;
+    margin-top: 80px;
+
+    border-radius: 10px;
+    background-color: var(--cbg);
+    box-shadow: 0px 0px 10px black;
+}
+*/
