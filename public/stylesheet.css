@@ -9,15 +9,39 @@
 
 body {
     margin: 0px;
-	background-color: white;
+	background-color: var(--cbg);
 	/*margin-top:50px;*/
 }
 
 
+.tile {
+    width: 1cm;
+    height: 1cm;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+.black {
+    background-color: black;
+}
+
+.label {
+    color: whitesmoke;
+}
+
+table {
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
 #title_div {
     height: 50px;
     padding: 8px 16px 8px 16px;
-    box-shadow: 0px 0px 10px 6px black;
+    box-shadow: 0px 0px 8px 2px black;
     background-color: var(--cbg);
     color: whitesmoke;
     display: flex;
@@ -26,7 +50,7 @@ body {
 }
 
 
-.upBtn {
+#upBtn {
     width: 80px;
     height: 40px;
 
@@ -40,7 +64,7 @@ body {
     transition-duration: 0.2s;
 }
 
-.upBtn:hover {
+#upBtn:hover {
     background-color: var(--btn_light);
 }
 
