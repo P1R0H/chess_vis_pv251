@@ -38,6 +38,12 @@ table {
     color: whitesmoke;
 }
 
+#move_stats {
+    height: 600px;
+    width: 100%;
+}
+
+
 #title_div {
     height: 50px;
     padding: 8px 16px 8px 16px;
@@ -49,6 +55,9 @@ table {
     justify-content: space-between;
 }
 
+#move_bar {
+    height: 32px;
+}
 
 #upBtn {
     width: 80px;
@@ -69,9 +78,23 @@ table {
 }
 
 
-#main_content {
-    height: 400px;
+#vis_div {
+    height: 9cm;
+    color: whitesmoke;
+    display: flex;
+}
 
+#chessboard {
+    width: 600px;
+}
+
+#bar {
+    height: 24px;
+    width: 400px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 h1 {

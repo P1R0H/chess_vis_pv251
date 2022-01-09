@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <title>ChessVIS</title>
-    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="./public/stylesheet.css" rel="stylesheet">
@@ -20,9 +20,12 @@
     </div>
 
   	<div>
-      <div id="chessboard"></div>
-      <div id="moveStats"></div>
-      <div id="moveTree"></div>
+      <div id="move_bar"></div>
+      <div id="vis_div">
+        <div id="chessboard"></div>
+        <div id="move_stats"></div>
+      </div>
+<!--      <div id="moveTree"></div> -->
     </div>
 
 <!-- drag'n'drop upload modal-->
