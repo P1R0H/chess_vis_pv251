@@ -80,25 +80,27 @@ function update(move) {
         .append('div')
         .attr("id","bar");
 
-    moveStats.append("div")
+    var bar = moveStats.append("div")
         .attr("id", "move")
-        .style("width", "30px")
+        .style("width", "50px")
         .text(d => d)
         .on("click", update);
 
     moveStats.insert("div")
-        .style("background-color", "white");
-    
+        .style("width", "300px")
+        .style("height", "100%")
+        .style("background-color", "white")
+        .append("div").append('div');
+        
     moveStats.insert("div")
         .attr("id", "score")
-        .style("width", "30px")
+        .style("text-align", "right")
+        .style("width", "50px")
         .text(d => currentNode.moves[d].total);
 
     moveStats.sort((a,b) => d3.descending(
             currentNode.moves[a].total,
             currentNode.moves[b].total ));
-    
-    moveStats.transition()
 
 
     console.log(`update: ${move}`)
