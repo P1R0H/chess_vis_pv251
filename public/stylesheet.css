@@ -15,21 +15,26 @@ body {
 
 
 .tile {
-    width: 1cm;
+    min-width: 1cm;
     height: 1cm;
+    border-color: var(--cbg);
     font-family: sans-serif;
+    color: black;
     text-align: center;
+    font-size: 30px;
+
 }
 
 .white {
-    background-color: whitesmoke;
+    background-color: lightgray;
 }
 
 .black {
-    background-color: black;
+    background-color: gray;
 }
 
 .label {
+    font-size: 16px;
     color: whitesmoke;
 }
 
@@ -38,13 +43,14 @@ table {
     color: whitesmoke;
 }
 
-#move_stats {
-    height: 600px;
+#moveStats {
+    padding-left: 12px;
+    padding-right: 32px;
     width: 100%;
 }
 
 
-#title_div {
+#titleDiv {
     height: 50px;
     padding: 8px 16px 8px 16px;
     box-shadow: 0px 0px 8px 2px black;
@@ -55,18 +61,21 @@ table {
     justify-content: space-between;
 }
 
-#move_bar {
-    height: 32px;
+#moveBar {
+    margin: 8px;
+    display: flex;
+    color: white;
+    font-family: sans-serif;
+    min-height: 40px;
+    width: 100%; 
 }
 
 #upBtn {
     width: 80px;
     height: 40px;
-
     font-weight: bolder;
 
     border-radius: 8px;
-    border: 2px solid var(--btn_light);
     display: inline-block;
     background-color: var(--cbg);
     color: whitesmoke;
@@ -77,23 +86,77 @@ table {
     background-color: var(--btn_light);
 }
 
+#prevBtn {
+    color: whitesmoke;
+    font-weight: bolder;
 
-#vis_div {
+    min-width: 40px;
+    height: 40px;
+    align-self: center;
+    background-color: var(--cbg);
+    border-radius: 50%;
+
+}
+
+#prevBtn:hover {
+    background-color: var(--btn_light);
+}
+
+
+#visDiv {
+    display: flex;
+    justify-content: center;
     height: 9cm;
     color: whitesmoke;
-    display: flex;
 }
 
 #chessboard {
-    width: 600px;
+    width: 100%;
+    max-width: 380px;
+}
+
+#move {
+    text-align: left;
+    width: 60px;
 }
 
 #bar {
     height: 24px;
-    width: 400px;
-    padding: 2px;
+    line-height: 24px;
+    width: 100%;
+    padding: 4px;
     display: flex;
-    justify-content: space-between;
+}
+
+#score {
+    text-align: right;
+    width: 42px;
+}
+
+#resBar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#res {
+    text-align: center;
+    height: 100%px;
+}
+
+.wRes {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.bRes {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.dRes {
+    background-color: gray;
+    color: black;
 }
 
 h1 {

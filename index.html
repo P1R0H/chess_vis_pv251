@@ -12,35 +12,22 @@
 
   </head>
   <body>
-    <input id="file-input" type="file" style="display: none;"></input>
+    <input id="fileInput" type="file" style="display: none;"></input>
 
-	  <div id="title_div">
+	  <div id="titleDiv">
       <h1>ChessVIS</h1>
       <button id="upBtn">UPLOAD PGN</button>
     </div>
 
   	<div>
-      <div id="move_bar"></div>
-      <div id="vis_div">
+      <div id="moveBar">
+        <button id="prevBtn"><</button>
+        <div id="moves"></div>
+      </div>
+
+      <div id="visDiv">
         <div id="chessboard"></div>
-        <div id="move_stats"></div>
-      </div>
-<!--      <div id="moveTree"></div> -->
-    </div>
-
-<!-- drag'n'drop upload modal-->
-<!--
-
-    <div class="modalBgr">
-      <div id="upModal", class="modal">
-        <div id="dropBox">
-          <span>Select<span> or drag files from the computer
-        </div>
-        <div >
-
-        </div>
+        <div id="moveStats"></div>
       </div>
     </div>
--->
-
   </body>
