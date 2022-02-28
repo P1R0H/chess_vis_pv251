@@ -95,7 +95,7 @@ table {
     align-self: center;
     background-color: var(--cbg);
     border-radius: 50%;
-
+    margin-right: 6px;
 }
 
 #prevBtn:hover {
@@ -128,12 +128,25 @@ table {
     display: flex;
 }
 
-#score {
+#count {
+    margin-left: 4px;
     text-align: right;
     width: 42px;
 }
 
+#move {
+    text-align: center;
+    margin-right: 4px;
+    border-radius: 6px;
+    background-color: var(--btn_light);
+}
+#move:hover {
+    background-color: gray;
+}
+
 #resBar {
+    border-radius: 6px;
+    overflow: hidden;
     height: 100%;
     width: 100%;
     display: flex;
@@ -141,7 +154,7 @@ table {
 
 #res {
     text-align: center;
-    height: 100%px;
+    height: 100%;
 }
 
 .wRes {
@@ -157,6 +170,35 @@ table {
 .dRes {
     background-color: gray;
     color: black;
+}
+
+#moves {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.move {
+    width: 56px;
+    height: 20px;
+    margin: 2px;
+    border-radius: 4px;
+    text-align: center;
+    
+}
+
+.move:hover {
+    background-color: gray;
+}
+
+.wmove {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.bmove {
+    color: whitesmoke;
+    border-color: whitesmoke;
+    background-color: black;
 }
 
 h1 {

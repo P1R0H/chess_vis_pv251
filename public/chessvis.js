@@ -254,7 +254,15 @@ function previousMove() {
 
 function chooseMove(move) {
     // choose exact move from position history
-    // TODO
+    var new_moves = position.moveList.slice(0, 
+        move.target.getAttribute("seq"))
+    
+    currentNode = gameTree;
+    for (var move of new_moves) {
+        currentNode = currentNode.get_node(move);
+    }
+    position.resetMoves(new_moves);
+    update();
 }
 
 function makeMove(move) {
@@ -303,7 +311,7 @@ function update() {
         .attr("id", "resBar");
         
     moveStats.insert("div")
-        .attr("id", "score")
+        .attr("id", "count")
         .text(d => currentNode.moves[d].total);
     
     bar.append("div")
@@ -328,11 +336,28 @@ function update() {
             currentNode.moves[a].total,
             currentNode.moves[b].total ));
     
-    var child = document.getElementById("chessboard").lastElementChild;
-    document.getElementById("chessboard").removeChild(child);
-    document.getElementById("chessboard").appendChild(
-        position.toDOM()
-    );
+    var board = document.getElementById("chessboard");
+    board.removeChild(board.lastElementChild);
+    board.appendChild(position.toDOM());
+
+    var moves = document.getElementById("moves");
+    while(moves.lastElementChild) {
+        moves.removeChild(moves.lastElementChild)
+    }
+
+    var white = true;
+    for (var i = 0; i < position.moveList.length; i++) {
+        var move = document.createElement("div")
+        move.className = "move " + (white ? "wmove" : "bmove");
+        move.textContent = position.moveList[i];
+        move.setAttribute("seq", i+1);
+        move.onclick = chooseMove;
+        moves.appendChild(move)
+        white = !white;
+
+    }
+
+
 }
 
 function parsePgn(pgnStr) {
